@@ -1,16 +1,14 @@
 
 
 <div align="center">
-<h1>Genpruner: Enable Efficient Large Language Models via Generative Pruning</h1>
-  <div align="center">
+<h1>CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge</h1>
 </div>
 
 <p align="center">
-<img src="figures/Genpruner.png" width="100%"> <br>
+<img src="figures/CLONE.png" width="100%"> <br>
 </p>
 
 ## Introduction
-
 #### Supported LLMs:
 - [x] [Llama-2 Hugging Face](https://github.com/horseee/LLM-Pruner#1-pruning-discovery-stage--estimation-stage)
 - [x] [LLaMA Hugging Face](https://github.com/horseee/LLM-Pruner#1-pruning-discovery-stage--estimation-stage)
