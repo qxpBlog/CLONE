@@ -10,11 +10,11 @@
 
 ## Introduction
 #### Supported LLMs:
-- [x] [Llama-2 Hugging Face](https://github.com/horseee/LLM-Pruner#1-pruning-discovery-stage--estimation-stage)
-- [x] [LLaMA Hugging Face](https://github.com/horseee/LLM-Pruner#1-pruning-discovery-stage--estimation-stage)
-- [x] [BLOOM](https://github.com/horseee/LLM-Pruner/tree/main/examples#cherry_blossom-bloom) 
-- [x] [Vicuna](https://github.com/horseee/LLM-Pruner#llama-vicuna-pruning)
-- [x] [Baichuan](https://github.com/horseee/LLM-Pruner/tree/main/examples#llama-baichuan-pruning)
+- [x] [Llama-2 Hugging Face](https://huggingface.co/meta-llama/Llama-2-7b-hf)
+- [x] [LLaMA Hugging Face](https://huggingface.co/huggyllama/llama-7b)
+- [x] [BLOOM](https://huggingface.co/bigscience/bloom) 
+- [x] [Vicuna](https://huggingface.co/lmsys/vicuna-7b-v1.5)
+- [x] [Baichuan](https://huggingface.co/baichuan-inc/Baichuan-7B)
 
 #### Updates:
 * Oct 6, 2024: :tada: Code released! 
