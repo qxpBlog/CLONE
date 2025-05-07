@@ -28,7 +28,7 @@ This repository supplies only the software‑module code; the hardware component
   - [Fintune](#fintune)
   - [Evaluation](#evaluation)
 ## Quick Start
-
+Quick start is based on llama2-7b as an example, other models can change the base model path.
 ### 1. Installation
 ```
 pip install -r requirement.txt
