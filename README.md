@@ -24,7 +24,8 @@
 Coming !!!
 ## Table of Contents
   - [Quick Start](#quick-start)
-
+  - [Evaluation](#evaluation)
+  - [Fintune](#fintune)
 ## Quick Start
 
 ### 1. Installation
@@ -46,7 +47,18 @@ cd ../Pruner
 bash quick_start.sh
 ```
 
-
+## Evaluation
+You can run the following command to evalute different models, such as Llama-7B，Llama2-7B Vicuna-7B Llama2-13B,  on BBH (zero-shot), MMLU (3-shot), PPL, and Commonsense (zero-shot).
+```
+cd ../Pruner
+bash eval.sh
+```
+## Fintune
+You can run the following command to fintune the modle on different datasets, such as alpaca and bbh.
+```
+cd ../Pruner
+bash fintune.sh
+```
 
 ## Acknowledgement
 
