@@ -17,7 +17,7 @@
 - [x] [Baichuan](https://huggingface.co/baichuan-inc/Baichuan-7B)
 
 #### Updates:
-* May 6, 2024: :tada: Code released! 
+* May 6, 2025: :tada: Code released! 
 
 #### Contact Us:
 
