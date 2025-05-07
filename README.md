@@ -54,7 +54,7 @@ cd ../Pruner
 bash fintune.sh
 ```
 ## Evaluation
-You can run the following command to evalute different models, such as Llama-7B，Llama2-7B Vicuna-7B Llama2-13B,  on BBH (zero-shot), MMLU (3-shot), PPL, and Commonsense (zero-shot).
+You can run the following command to evalute Llama2-7B on BBH (zero-shot), MMLU (3-shot), PPL, and Commonsense (zero-shot).
 ```
 cd ../Pruner
 bash eval.sh
