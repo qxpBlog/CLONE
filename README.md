@@ -23,6 +23,7 @@
 
 Coming !!!
 ## Table of Contents
+This repository supplies only the software‑module code; the hardware components are not available for remote testing.
   - [Quick Start](#quick-start)
   - [Evaluation](#evaluation)
   - [Fintune](#fintune)
