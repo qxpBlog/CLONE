@@ -48,7 +48,7 @@ cd ../Pruner
 bash quick_start.sh
 ```
 ## Fintune
-You can run the following command to fintune the modle on different datasets, such as alpaca and bbh.
+You can run the following command to fintune the modle on alpaca.
 ```
 cd ../Pruner
 bash fintune.sh
