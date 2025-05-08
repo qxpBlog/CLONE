@@ -54,7 +54,7 @@ cd ../Pruner
 bash fintune.sh
 ```
 ## Evaluation
-You can run the following command to evalute Llama2-7B on BBH (zero-shot), MMLU (3-shot), PPL, and Commonsense (zero-shot).
+You can run the following command to evalute Llama2-7B on BBH (zero-shot), MMLU (3-shot), PPL, and Commonsense (zero-shot). You need to download [LLaMA-Factory-main](https://drive.google.com/file/d/1qtnkk602BYOlNuh1m7DCt23Fv5g3xIyl/view?usp=drive_link) and place it in the ```Pruner``` folder
 ```
 cd ../Pruner
 bash eval.sh
