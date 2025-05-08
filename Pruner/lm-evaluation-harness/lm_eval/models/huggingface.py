@@ -187,7 +187,7 @@ class HuggingFaceAutoLM(BaseLM):
 
         self._add_special_tokens = add_special_tokens
         if checkpoint is not None:
-            pruned_dict = torch.load(checkpoint, map_location='cpu')
+            pruned_dict = torch.load(checkpoint, map_location='cpu', weights_only=False)
             if 'tokenizer' in pruned_dict:
                 self.tokenizer = pruned_dict['tokenizer']
             else:
