@@ -1,6 +1,6 @@
 #!/bin/bash
 HF_ENDPOINT=https://hf-mirror.com
-BASE_MODEL=meta-llama/Llama-2-7b 
+BASE_MODEL=meta-llama/Llama-2-7b-hf
 LOG_PATH=eval_logs
 
 mkdir -p "$LOG_PATH"
