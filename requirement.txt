@@ -20,3 +20,6 @@ pytablewriter
 codecarbon
 nevergrad
 peft
+tiktoken
+trl==0.4.7
+smoothquant
