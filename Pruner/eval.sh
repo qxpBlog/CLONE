@@ -22,7 +22,7 @@ HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python hf_prune_bbh.py \
 # evaluate mmlu
 export PYTHONPATH='.' 
 CUDA_VISIBLE_DEVICES=0 python Pruner/LLaMA-Factory-main/src/evaluate.py \
-      --model_name_or_path  Pruner/prune_log/llama_prune/your_pytorch_model.bin \
+      --model_name_or_path  Pruner/prune_log/llama_prune/pytorch_model.bin \
       --template vanilla \
       --finetuning_type lora \
       --task mmlu \
@@ -36,7 +36,7 @@ CUDA_VISIBLE_DEVICES=0 python Pruner/LLaMA-Factory-main/src/evaluate.py \
 export PYTHONPATH='.' 
 HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python lm-evaluation-harness/main.py \
       --model hf-causal-experimental \
-      --model_args checkpoint=Pruner/prune_log/llama_prune/your_pytorch_model.bin,config_pretrained=$BASE_MODEL \
+      --model_args checkpoint=Pruner/prune_log/llama_prune/pytorch_model.bin,config_pretrained=$BASE_MODEL \
       --tasks openbookqa,arc_easy,winogrande,hellaswag,arc_challenge,piqa,boolq \
       --no_cache \
       > "$LOG_PATH/Commonsense.log" 2>&1
