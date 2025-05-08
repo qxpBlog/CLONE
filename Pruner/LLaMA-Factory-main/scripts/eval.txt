@@ -1,0 +1,32 @@
+export PYTHONPATH='.' 
+CUDA_VISIBLE_DEVICES=1 python /home/iotsc01/xinpengq/LLM-Pruner-main/LLaMA-Factory-main/src/evaluate.py \
+    --model_name_or_path  /home/iotsc01/xinpengq/LLM-Pruner-main/prune_log/llama_prune_0.2_mlp_3/pytorch_model.bin \
+    --template vanilla \
+    --finetuning_type lora \
+    --task mmlu \
+    --split test \
+    --lang en \
+    --n_shot 5 \
+    --batch_size 4
+
+CUDA_VISIBLE_DEVICES=2 python src/train_bash.py \
+    --stage sft \
+    --model_name_or_path meta-llama/Llama-2-7b-hf \
+    --do_train true \
+    --dataset code_alpaca_20k \
+    --template default \
+    --finetuning_type adalora \
+    --lora_target q_proj,v_proj \
+    --output_dir ./sft_checkpoint_t/llama2_code \
+    --overwrite_cache \
+    --per_device_train_batch_size 4 \
+    --gradient_accumulation_steps 4 \
+    --lr_scheduler_type cosine \
+    --logging_steps 10 \
+    --save_steps 1000 \
+    --learning_rate 5e-5 \
+    --num_train_epochs 3.0 \
+    --lora_rank 16 \
+    --plot_loss \
+    --fp16
+
