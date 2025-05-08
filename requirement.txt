@@ -5,7 +5,7 @@ sentencepiece
 accelerate
 wandb
 ptflops
-gradio
+gradio==3.39.0
 rouge-score>=0.0.4
 jsonlines
 numexpr
@@ -21,5 +21,4 @@ codecarbon
 nevergrad
 peft
 tiktoken
-trl==0.4.7
-smoothquant
+trl==0.8.6
