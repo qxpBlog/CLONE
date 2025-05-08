@@ -14,14 +14,14 @@ HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python hf_prune.py \
       --device cuda \
       --eval_device cuda \
       --save_model \
-      --save_ckpt_log_name llama_prune_0.2 \
+      --save_ckpt_log_name llama_prune \
       --base_model $BASE_MODEL \
       > "$LOG_PATH/llama_prune_0.2.log" 2>&1
 
 
 echo "20% block fine-tuning"
 HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python post_training.py \
-      --prune_model prune_log/llama_prune_0.2/pytorch_model.bin \
+      --prune_model prune_log/llama_prune/pytorch_model.bin \
       --data_path yahma/alpaca-cleaned \
       --lora_r 8 \
       --num_epochs 2 \
