@@ -6,7 +6,7 @@ LOG_PATH=eval_logs
 mkdir -p "$LOG_PATH"
 
 # evaluate bbh
-export PYTHONPATH='Pruner/lorahub1' 
+export PYTHONPATH='lorahub1' 
 HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python hf_prune_bbh.py \
       --pruning_ratio 0.2 \
       --block_wise \
