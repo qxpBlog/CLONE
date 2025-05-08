@@ -1,6 +1,6 @@
 torch>=1.7.1
 transformers>=4.28.1
-datasets
+datasets==3.6.0
 sentencepiece
 accelerate
 wandb
