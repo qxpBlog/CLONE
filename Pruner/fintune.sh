@@ -4,7 +4,7 @@ HF_ENDPOINT=https://hf-mirror.com
 
 # fintune on alpaca
 HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python post_training.py \
-      --prune_model prune_log/llama_prune/your_pytorch_model.bin \
+      --prune_model prune_log/llama_prune/pytorch_model.bin \
       --data_path yahma/alpaca-cleaned \
       --lora_r 8 \
       --num_epochs 2 \
