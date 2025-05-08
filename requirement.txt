@@ -18,3 +18,5 @@ pycountry
 omegaconf
 pytablewriter
 codecarbon
+nevergrad
+peft
