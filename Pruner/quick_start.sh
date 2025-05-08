@@ -1,12 +1,12 @@
 #!/bin/bash
 HF_ENDPOINT=https://hf-mirror.com
 BASE_MODEL=meta-llama/Llama-2-7b
-ORTHER_PRUNING_PATH=Pruner/eval_logs
+LOG_PATH=eval_logs
 
-mkdir -p "$ORTHER_PRUNING_PATH"
+mkdir -p "$LOG_PATH"
 
 echo "20% block pruning"
-HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=1 python hf_prune.py \
+HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python hf_prune.py \
       --pruning_ratio 0.2 \
       --block_wise \
       --pruner_type taylor \
@@ -16,11 +16,11 @@ HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=1 python hf_prune.py \
       --save_model \
       --save_ckpt_log_name llama_prune_0.2 \
       --base_model $BASE_MODEL \
-      > "$ORTHER_PRUNING_PATH/test_latency_energy_0.2.log" 2>&1
+      > "$LOG_PATH/llama_prune_0.2.log" 2>&1
 
 
 echo "20% block fine-tuning"
-HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=1 python post_training.py \
+HF_ENDPOINT=$HF_ENDPOINT CUDA_VISIBLE_DEVICES=0 python post_training.py \
       --prune_model prune_log/llama_prune_0.2/pytorch_model.bin \
       --data_path yahma/alpaca-cleaned \
       --lora_r 8 \
