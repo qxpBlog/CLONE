@@ -14,7 +14,7 @@ from record import RecordList
 from utils.logger import error, info
 
 
-base_path = '/home/iotsc01/xinpengq/AutoS'
+base_path = '.' # Your path to Generator
 
 
 class Evaluator(object):
