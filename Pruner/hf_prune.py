@@ -35,8 +35,8 @@ def main(args):
         root_dir='prune_log',
         setup_sublogger=True
     )
-
-    tokenizer = LlamaTokenizer.from_pretrained(args.base_model)
+    access_token = '' # access_token can be generated from huggingface UI
+    tokenizer = LlamaTokenizer.from_pretrained(args.base_model, token=access_token)
     model = LlamaForCausalLM.from_pretrained(
         args.base_model,
         low_cpu_mem_usage=True if args.torch_version >=1.9 else False
